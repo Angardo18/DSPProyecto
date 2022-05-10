@@ -12,14 +12,19 @@ main.obj: D:/programas/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/inclu
 main.obj: D:/programas/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/machine/_stdint.h
 main.obj: D:/programas/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_stdint.h
 main.obj: D:/programas/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h
-main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/gpio.h
-main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/sysctl.h
-main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/debug.h
-main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/uart.h
-main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/pin_map.h
-main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/inc/hw_memmap.h
 main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/inc/hw_ints.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/inc/hw_memmap.h
 main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/inc/hw_types.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/adc.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/debug.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/fpu.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/gpio.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/pin_map.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/rom.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/sysctl.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/timer.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/uart.h
 main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/utils/uartstdio.h
 main.obj: D:/programas/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdarg.h
 
@@ -47,21 +52,31 @@ D:/programas/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_st
 
 D:/programas/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdbool.h:
 
-D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/gpio.h:
-
-D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/sysctl.h:
-
-D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/debug.h:
-
-D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/uart.h:
-
-D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/pin_map.h:
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/inc/hw_ints.h:
 
 D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/inc/hw_memmap.h:
 
-D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/inc/hw_ints.h:
-
 D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/inc/hw_types.h:
+
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/adc.h:
+
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/debug.h:
+
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/fpu.h:
+
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/gpio.h:
+
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/interrupt.h:
+
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/pin_map.h:
+
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/rom.h:
+
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/sysctl.h:
+
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/timer.h:
+
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/uart.h:
 
 D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/utils/uartstdio.h:
 
