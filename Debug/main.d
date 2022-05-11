@@ -25,6 +25,7 @@ main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/rom.h
 main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/sysctl.h
 main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/timer.h
 main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/uart.h
+main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/ssi.h
 main.obj: D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/utils/uartstdio.h
 main.obj: D:/programas/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdarg.h
 
@@ -77,6 +78,8 @@ D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/sysctl.h:
 D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/timer.h:
 
 D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/uart.h:
+
+D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/ssi.h:
 
 D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/utils/uartstdio.h:
 

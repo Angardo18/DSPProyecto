@@ -21,20 +21,28 @@
 #include "driverlib/sysctl.h"
 #include "driverlib/timer.h"
 #include "driverlib/uart.h"
+#include "driverlib/ssi.h"
 //----------- utilidades -------------------
 #include "uartstdio.h"
+
+//-------- constantes SPI ------------------
+#define NUM_SPI_DATA    1  // Número de palabras que se envían cada vez
+#define VALOR_MAX    4095  // Valor máximo del contador
+#define SPI_FREC  4000000  // Frecuencia para el reloj del SPI
+#define SPI_ANCHO      16  // Número de bits que se envían cada vez, entre 4 y 16
 // -- variables de pruebas -----------------
 uint16_t cont = 0;
 
 //------- variables globales ---------------
-uint16_t freq_muestreo = 1000;// En Hz
+uint16_t freq_muestreo = 44200;// En Hz
+uint32_t ADCvalue[1];
+uint32_t pui32DataTx[NUM_SPI_DATA]; // la función put pide tipo uint32_t
 
 //******Funciones de interrupciones*********
 void Timer0IntHandler(void){
     //! - ADC0 peripheral
     //! - GPIO Port E peripheral (for AIN0 pin)
     //! - AIN0 - PE3
-    uint32_t ADCvalue[1];
     TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
     // Trigger the ADC conversion.
     ADCProcessorTrigger(ADC0_BASE, 3);
@@ -45,6 +53,12 @@ void Timer0IntHandler(void){
     ADCSequenceDataGet(ADC0_BASE, 3, ADCvalue);
     // Display the AIN0 (PE3) digital value on the console.
     UARTprintf("%d\n", ADCvalue[0]);
+    // SPI prueba
+    // El DAC espera 16 bits: 4 de configuraciones y 12 del dato
+    pui32DataTx[0] = (uint32_t)((0b0111 << 12) | (0x0FFF & ADCvalue[0]));
+    SSIDataPut(SSI0_BASE, pui32DataTx[0]);
+    while(SSIBusy(SSI0_BASE)){}
+
 }
 
 
@@ -83,6 +97,19 @@ int main(void){
     IntEnable(INT_TIMER0A);
     TimerIntEnable(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
     TimerEnable(TIMER0_BASE, TIMER_A);
+    //---------- SPI -------------------------------------
+    uint32_t pui32residual[NUM_SPI_DATA];
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_SSI0); //habilitar periferico SSI
+    GPIOPinConfigure(GPIO_PA2_SSI0CLK);
+    GPIOPinConfigure(GPIO_PA3_SSI0FSS);
+    GPIOPinConfigure(GPIO_PA4_SSI0RX);
+    GPIOPinConfigure(GPIO_PA5_SSI0TX);
+    GPIOPinTypeSSI(GPIO_PORTA_BASE, GPIO_PIN_5 | GPIO_PIN_4 | GPIO_PIN_3 |
+                      GPIO_PIN_2);
+    SSIConfigSetExpClk(SSI0_BASE, SysCtlClockGet(), SSI_FRF_MOTO_MODE_0,
+                           SSI_MODE_MASTER, SPI_FREC, SPI_ANCHO);
+    SSIEnable(SSI0_BASE);
+    while(SSIDataGetNonBlocking(SSI0_BASE, &pui32residual[0])){};
 
 
 
