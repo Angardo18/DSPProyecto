@@ -9,12 +9,12 @@ CMD_SRCS += \
 ../tm4c123gh6pm.cmd 
 
 LIB_SRCS += \
-D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib 
+C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib 
 
 C_SRCS += \
 ../main.c \
 ../tm4c123gh6pm_startup_ccs.c \
-D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/utils/uartstdio.c 
+C:/ti/TivaWare_C_Series-2.1.4.178/utils/uartstdio.c 
 
 C_DEPS += \
 ./main.d \
@@ -39,6 +39,6 @@ C_DEPS__QUOTED += \
 C_SRCS__QUOTED += \
 "../main.c" \
 "../tm4c123gh6pm_startup_ccs.c" \
-"D:/SDKs/ti/TivaWare_C_Series-2.2.0.295/utils/uartstdio.c" 
+"C:/ti/TivaWare_C_Series-2.1.4.178/utils/uartstdio.c" 
 
 
